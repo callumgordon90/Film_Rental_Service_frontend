@@ -1,7 +1,7 @@
 .designHome {
 
-    background-color: beige;
     
+    background-color: rgba(0, 0, 0, 0.527);
     height: 26.1em;
 
     display: flex;
@@ -34,7 +34,7 @@
     height: 20em;
     width: 9em;
 
-    background-color: hsl(221, 40%, 54%);
+    background-color: black;
 
     margin: .2em;
 
@@ -47,6 +47,7 @@
     justify-content: flex-start;
 
     color: white;
+    font-family: 'Press Start 2P', cursive;;
     font-weight: bold;
 }
 

@@ -6,7 +6,7 @@ const Register = () => {
 
     return (
         <div className='designRegister'>
-            soy Register
+            You can register here
         </div>
     )
 

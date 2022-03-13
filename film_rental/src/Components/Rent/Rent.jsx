@@ -15,7 +15,7 @@ const Rent = (props) => {
             precio: 5,
             peliculaId: props.id,
             usuarioId: props.idUser,
-            fechaEntrega: "nuncaaaaaaaaaaaaaaaa hahahaha"
+            fechaEntrega: "never"
         }
 
         let config = {
