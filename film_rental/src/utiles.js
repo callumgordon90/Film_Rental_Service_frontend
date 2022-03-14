@@ -10,31 +10,31 @@ export const checkError = (type,value) => {
 
             if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value) ) {
                 
-                return "Introduce un e-mail válido";
+                return "Error! Introduce a valid email.";
             }else{
-                return "ok";
+                return "Ok";
             };
             
         
         case 'nombre': 
 
             if (! /[a-z]/gi.test(value) ) {
-                return "Introduce un nombre válido";
+                return "Error! Introduce a valid name.";
             }else{
-                return "ok";
+                return "Ok";
             };
 
         
         case 'telefono':
 
             if (! /[\d()+-]/g.test(value) ) {
-                return "Introduce un telefono válido";
+                return "Error! Introduce a valid telephone number.";
             }else{
-                return "ok";
+                return "Ok";
             };
 
         default:
-            return "ok";
+            return "Ok";
         
 
     }
