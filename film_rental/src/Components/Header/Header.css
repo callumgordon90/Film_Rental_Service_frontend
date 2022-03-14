@@ -22,6 +22,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
+   
 }
 
 .link {
@@ -33,6 +34,17 @@
     font-weight: bold;
     cursor:pointer;
 }
+
+.welcomelink {
+    margin-right: 3em;
+    margin-bottom: 1em;
+}
+
+.welcomelink:hover {
+    font-weight: bold;
+    cursor:pointer;
+}
+
 
 .searchDesign {
     display: flex;

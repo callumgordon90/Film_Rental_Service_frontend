@@ -5,6 +5,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Containers/Home/Home';
+
+import Welcome from './Containers/Welcome/Welcome';
+
 import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Profile from './Containers/Profile/Profile';
@@ -21,6 +24,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/welcome" element={<Welcome/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/profile" element={<Profile/>}/>
