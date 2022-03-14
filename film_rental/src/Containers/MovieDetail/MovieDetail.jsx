@@ -13,8 +13,8 @@ const MovieDetail = (props) => {
 
 
     useEffect(()=> {
-        //Compruebo si hay datos de la película escogida en redux, en caso de NO
-        //haber datos, redirijo a HOME.
+        //Checking if there is information about the chosen film in redux. In the case that there is NO information
+        // it will redirect to home
 
         if(props.search?.title === undefined){
             navigate("/");
@@ -28,7 +28,7 @@ const MovieDetail = (props) => {
                     <div className="dataFilm">{props.search?.synopsis}</div>
                     <div className="dataFilm">
                         {
-                            //EN CASO DE QUE TOKEN SEA TRUE, SI SE INCLUYE EL ELEMENTO RENT
+                            //IN CASE TOKEN IS TRUE, IF RENT ELEMENT IS INCLUDED
                             props.credentials.token && <Rent id={props.search.id} token={props.credentials.token} idUser={props.credentials.usuario.id}/>
                         }
                     </div>

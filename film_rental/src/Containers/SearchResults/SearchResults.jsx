@@ -18,7 +18,7 @@ const SearchResults = (props) => {
     //useEffect custom para el hook films
 
     // useEffect(()=>{
-    //     console.log("vaya, , films ha cambiado, ", props.films);
+    //     console.log("films has changed, ", props.films);
     // },[props.films]);
 
     // const traePelis = async () => {
@@ -43,7 +43,7 @@ const SearchResults = (props) => {
 
     const escogePelicula = (pelicula) => {
         
-        console.log(pelicula, "he escogido esta....");
+        console.log(pelicula, "I have chosen this one....");
         //Guardamos la pelicula escogida en redux
         props.dispatch({type:MOVIE_DETAIL, payload: pelicula});
 

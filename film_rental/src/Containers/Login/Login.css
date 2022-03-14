@@ -1,6 +1,6 @@
 .designLogin {
 
-    background-color: beige;
+    background-color:  rgba(0, 0, 0, 0.911);;
     
     height: 26.1em;
 
@@ -17,7 +17,8 @@
     color: white;
 
     transition: 0.3s;
-    background-color: green;
+    background-color: blue;
+    border-radius: 1em;
 
     display: flex;
     align-items: center;
@@ -26,3 +27,8 @@
     margin-top: 2em;
 }
 
+.loginButton:hover{
+    background-color:  rgba(0, 0, 0, 0.527);
+    font-weight: bold;
+    cursor:pointer;
+}
