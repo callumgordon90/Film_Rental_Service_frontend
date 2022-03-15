@@ -18,7 +18,7 @@ const Header = (props) => {
     const [titulo, setTitulo] = useState("");
 
     useEffect(() => {
-        // console.log(props.credentials);
+        console.log("credentials inside header", props.credentials);
     })
 
     const navegar = (lugar) => {
@@ -95,7 +95,7 @@ const Header = (props) => {
                     <div className="relleno"></div>
                 </div>
                 <div className="headerSpace linksDesign">
-                    <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.nombre}</div>
+                    <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name}</div>
                     <div className="link" onClick={() => logOut()}>Logout</div>
                 </div>
             </div>

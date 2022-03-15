@@ -30,24 +30,29 @@ const Login = (props) => {
 
     //Funciones locales
 
-    const login = async () => {
+    const userLogin = async () => {
+        //Me invento las credenciales
+        let body = {
+            email: datosUsuario.email,
+            password: datosUsuario.password
+       }
 
         try {
 
-            //Me invento las credenciales
-            let body = {
-                 email: datosUsuario.email,
-                 password: datosUsuario.password
-            }
 
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body);
+            let resultado = await axios.post("http://localhost:3500/usuarios/login",body);
+
+            console.log("resultado aqui antes del if", resultado)
 
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if(resultado.data === "Usuario o contraseña inválido"){
                 setMsgError2("Usuario o contraseña inválido")
+                
             }else{
 
                 //Guardaríamos los datos en redux...
+
+                console.log("resultado aqui", resultado.data)
 
                 props.dispatch({type:LOGIN, payload: resultado.data});
 
@@ -79,7 +84,7 @@ const Login = (props) => {
                     {msgError}
                     {msgError2}
                 </div>
-                <div className="loginButton espacio" onClick={()=>login()}>LOGIN!</div>
+                <div className="loginButton espacio" onClick={()=>userLogin()}>LOGIN!</div>
             </div>
         );
 
