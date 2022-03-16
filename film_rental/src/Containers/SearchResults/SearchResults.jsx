@@ -6,20 +6,21 @@ import { MOVIE_DETAIL } from '../../redux/types';
 import {raiz} from '../../utiles';
 import './SearchResults.css';
 
+
 const SearchResults = (props) => {
 
     // const [films, setFilms] = useState([]);
     let navigate = useNavigate();
 
     useEffect(()=>{
-        console.log(props.films);
+        //console.log(props.films);
     },[]);
 
     //useEffect custom para el hook films
 
-    // useEffect(()=>{
-    //     console.log("films has changed, ", props.films);
-    // },[props.films]);
+     useEffect(()=>{
+         console.log("films have transformed, ", props.films);
+     },[props.films]);
 
     // const traePelis = async () => {
 
@@ -52,13 +53,13 @@ const SearchResults = (props) => {
         navigate("/moviedetail");
     }
  
-    if(props.films[0]?.id !== undefined){
+    if(props.films.results[0]?.id !== undefined){
         return(
             <div className="designRooster">
 
                 {
                     //Voy a mapear las películas
-                    props.films.map(pelicula => {
+                    props.films.results.map(pelicula => {
                         //a cada elemento que voy a mapear
                         //le brindo un KEY (obligatorio) que lo distinguirá de
                         //el resto de elementos
@@ -67,7 +68,7 @@ const SearchResults = (props) => {
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
                             <div key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
-                                <img className='cartel' src={pelicula.image} alt={pelicula.title}/>
+                                <img className='cartel' src={raiz + pelicula.poster_path} alt={pelicula.title}/>
                             </div>
                         )
                     })
