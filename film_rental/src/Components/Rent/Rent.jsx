@@ -11,10 +11,10 @@ const Rent = (props) => {
     const alquilar = async () => {
          //este body corresponde al body de pedido de postman
         let body = {
-            price: body.price,
-            peliculaId: body.peliculaId,
-            usuarioId: body.usuarioId,
-            fecha: body.fecha
+            price: 10,
+            peliculaId: props.id,
+            usuarioId: props.idUser,
+            fecha: "soon"
         }
 
     

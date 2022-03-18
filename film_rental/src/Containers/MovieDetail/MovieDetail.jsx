@@ -45,3 +45,4 @@ export default connect((state) => ({
     search : state.search.film
 }))(MovieDetail);
 
+
