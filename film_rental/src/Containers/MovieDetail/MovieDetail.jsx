@@ -24,17 +24,17 @@ const MovieDetail = (props) => {
         return(
             <div className='designFilm'>
                 <div className="filmDetailHalf">
-                    <div className="dataFilm">{props.search?.original_title}</div>
+                    <div className="dataFilm">{props.search?.title}</div>
                     <div className="dataFilm">{props.search?.overview}</div>
                     <div className="dataFilm">
                         {
                             //IN CASE TOKEN IS TRUE, IF RENT ELEMENT IS INCLUDED
-                            props.credentials.token && <Rent id={props.search.id} token={props.credentials.token} idUser={props.credentials.usuario.id}/>
+                            props.credentials.token && < Rent id={props.search.id} token={props.credentials.token} idUser={props.credentials.usuario.id}/>
                         }
                     </div>
                 </div>
                 <div className="filmDetailHalf">
-                    <img className="cartel" src={raiz + props.search.poster_path} alt={props.search.title}/></div>    
+                    <img className="cartel" src={raiz + props.search.image} alt={props.search.title}/></div>    
             </div>
         )
    

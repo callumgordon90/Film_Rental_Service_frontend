@@ -9,31 +9,32 @@ const Rent = (props) => {
     let navigate = useNavigate();
 
     const alquilar = async () => {
-        
+         //este body corresponde al body de pedido de postman
         let body = {
-            //este body corresponde al body de pedido de postman
-            precio: 5,
-            peliculaId: props.id,
-            usuarioId: props.idUser,
-            fechaEntrega: "never"
+            price: body.price,
+            peliculaId: body.peliculaId,
+            usuarioId: body.usuarioId,
+            fecha: body.fecha
         }
 
+    
+
         let config = {
-            headers: { Authorization: `Bearer ${props.token}` }
+        headers: { Authorization: `Bearer ${props.token}` }
         };
 
         try {
 
-            let res = await axios.post("https://movie-db-geekshubs.herokuapp.com/pedidos",body,config);
+        let res = await axios.post("http://localhost:3500/orders",body,config);
 
-            if(res){
-                console.log(res);
-                navigate("/");
-            }
+        if(res){
+        console.log(res);
+        navigate("/");
+         }
 
-        } catch (error) {
-            console.log(error)
-        }
+      } catch (error) {
+      console.log(error)
+       }
     }
 
     return (

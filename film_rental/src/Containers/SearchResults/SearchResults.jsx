@@ -26,7 +26,7 @@ const SearchResults = (props) => {
 
     //     try {
 
-    //         let res = await axios.get("https://lug-movie-club.herokuapp.com/movie-db/new");
+    //         let res = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-En&page=1"");
 
     //         //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
     //         //será setear esos datos en el hook, haciendo que las peliculas estén disponibles 

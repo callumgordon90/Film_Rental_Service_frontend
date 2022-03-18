@@ -1,0 +1,24 @@
+.designOrders {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    color: white;
+
+
+    height: 74vh;
+    width: 100vw;
+}
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+    height: 20vh;
+    width: 100vw;
+}

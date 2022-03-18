@@ -49,7 +49,8 @@ const Header = (props) => {
         try {
             let resultados = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US&query=${titulo}&page=1&include_adult=false`);
             // Original endpoint was this: https://videostore-backend.herokuapp.com/films/custom?arg=${titulo}
-            
+            // and this: `https://api.themoviedb.org/3/search/movie?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US&query=${titulo}&page=1&include_adult=false`)
+
 
             //Guardo en redux los resultados de las películas
 
@@ -96,7 +97,9 @@ const Header = (props) => {
                 </div>
                 <div className="headerSpace linksDesign">
                     <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name}</div>
+                    <div className="link"onClick={()=>navegar("/orders")}>Orders</div>
                     <div className="link" onClick={() => logOut()}>Logout</div>
+                    
                 </div>
             </div>
         )

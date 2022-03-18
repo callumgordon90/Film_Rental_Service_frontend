@@ -14,6 +14,12 @@ import Profile from './Containers/Profile/Profile';
 import MovieDetail from './Containers/MovieDetail/MovieDetail';
 import SearchResults from './Containers/SearchResults/SearchResults';
 
+
+import Orders from './Containers/Orders/Orders';
+import AdminOrders from './Containers/AdminOrders/AdminOrders';
+import AdminUsers from './Containers/AdminUsers/AdminUsers';
+
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +36,15 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/moviedetail" element={<MovieDetail/>}/>
           <Route path="/searchresults" element={<SearchResults/>}/>
+
+
+         
+          <Route path="/orders" element={<Orders/>}/>
+          <Route path="/adminorders" element={<AdminOrders/>}/>
+          <Route path="/adminusers" element={<AdminUsers/>}/>
+
+
+          <Route path="/welcome" element={<AdminOrders/>}/>
 
         </Routes>
 

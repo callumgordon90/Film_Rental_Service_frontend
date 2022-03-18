@@ -33,8 +33,8 @@ const Home = (props) => {
 
         try {
 
-            let res = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-En");
-            
+            let res = await axios.get("http://localhost:3500/peliculas/retrieve");
+            // Movie database api alternative: "https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-En"
             
 
             //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
@@ -43,8 +43,8 @@ const Home = (props) => {
 
             setTimeout(()=>{
 
-                setFilms(res.data.results);
-            },2000);
+                setFilms(res.data);
+            },1500);
 
         } catch (error) {
             console.log(error);
@@ -62,7 +62,7 @@ const Home = (props) => {
         navigate("/moviedetail");
     }
  
-    if(films[0]?.id != undefined){
+    if(films[0]?.id !== undefined){
         return(
             <div className="designRooster">
 
@@ -77,7 +77,7 @@ const Home = (props) => {
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
                             <div className="cardPelicula" key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
-                                <img className="fotoCard" src={raiz + pelicula.poster_path} alt={pelicula.title}/>
+                                <img className="fotoCard" src={raiz + pelicula.image} alt={pelicula.title}/>
                                 <p>{pelicula.overview}</p>
                             </div>
                             

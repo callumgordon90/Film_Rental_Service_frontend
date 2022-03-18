@@ -89,6 +89,9 @@ const Register = () => {
             let resultado = await axios.post("http://localhost:3500/usuarios", body);
             console.log(resultado);
             
+            // "https://api-film-deployed.herokuapp.com/usuarios"
+            // http://localhost:3500/usuarios
+           
                 setTimeout(()=>{
                     navigate("/login");
                 },1000);
