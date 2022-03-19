@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.527);
     background-repeat: no-repeat;
     background-position: bottom;
 
@@ -16,14 +16,26 @@
 
 }
 .data {
-    margin-top: 20em;
+   
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     overflow-x: scroll;
-    height: 30em;
+    height: 150vh;
     width: 100vw;
+    color: black;
+}
+
+.data:hover  {
+   
+    height: 150vh;
+    width: 100vw;
+    color: white;
+    font-weight: lighter;
+    
+    cursor: pointer;
+    transition: .5s;
 }
 
 
@@ -35,8 +47,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-style: solid;
-    border-radius: 2em;
-    border-color: grey;
-    background-color: lightgrey;
+    
+    border-radius: 15%;
+    
+    background-color: black;
+}
+
+
+
+.designHome {
+
+    
+    background-color: rgba(0, 0, 0, 0.438);
+    height: 26.1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

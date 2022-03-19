@@ -99,7 +99,7 @@ const Home = (props) => {
         return (
             <div className='designHome'>
                 <div className="marginLoader">
-                    <img src={require('../../img/loader.gif')} alt="cargador"/>
+                    <img src={require('../../img/loader.gif')} alt="loading"/>
                 </div>
             </div>
         )

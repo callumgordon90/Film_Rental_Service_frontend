@@ -42,6 +42,11 @@ const AdminUsers = (props) => {
     if(props.credentials?.usuario.role === true){
        
         return (
+
+            <div className = "introText"> <h1>Admin Section Only. Database of Customers</h1>
+            <h2>Customers are listed by: first name, surname and email address</h2> 
+
+
             <div className="field">
                 <div className="data"> {
                     
@@ -59,9 +64,16 @@ const AdminUsers = (props) => {
                 }</div>  
                
             </div>
+
+            </div>
+
         )}else{
-            return(
-                <div>Error 401</div>
+            return (
+                <div className='designHome'>
+                    <div className="marginLoader">
+                        <img src={require('../../img/loader.gif')} alt="loading"/>
+                    </div>
+                </div>
             )
         }
     
