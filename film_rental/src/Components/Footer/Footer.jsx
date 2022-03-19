@@ -8,7 +8,8 @@ const Footer = () => {
     return (
         <div className="designFooter">
             Film Rental Service - 2022
-        </div>
+            <p>filmrental@service.com</p>
+        </div> 
     )
 
 }

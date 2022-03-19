@@ -41,7 +41,7 @@ const Rent = (props) => {
     }
 
     return (
-        <div className="designRent" onClick={()=>alquilar()}>Alquilar</div>
+        <div className="designRent" onClick={()=>alquilar()}>Order it now!</div>
     )
 }
 

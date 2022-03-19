@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { MOVIE_DETAIL } from '../../redux/types';
 import {raiz} from '../../utiles';
 import './SearchResults.css';
+import { Card } from 'antd';
 
 
 const SearchResults = (props) => {
@@ -22,25 +23,7 @@ const SearchResults = (props) => {
          console.log("films have transformed, ", props.films);
      },[props.films]);
 
-    // const traePelis = async () => {
-
-    //     try {
-
-    //         let res = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-En&page=1"");
-
-    //         //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
-    //         //será setear esos datos en el hook, haciendo que las peliculas estén disponibles 
-    //         //para los return del componente.
-
-    //         setTimeout(()=>{
-
-    //             setFilms(res.data.results);
-    //         },2000);
-
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
+    
 
     const escogePelicula = (pelicula) => {
         
@@ -55,7 +38,14 @@ const SearchResults = (props) => {
  
     if(props.films.results[0]?.id !== undefined){
         return(
+
+            <div className = "introText"> <h1>See something you like here on our database? </h1>
+            <h2>Even if the film you want isn't in store.. we can order it from our warehouse! Email to find out more</h2> 
+
+
+
             <div className="designRooster">
+                
 
                 {
                     //Voy a mapear las películas
@@ -75,12 +65,13 @@ const SearchResults = (props) => {
                 }
                 
             </div>
+            </div>
         )
     }else{
         return (
             <div className='designHome'>
                 <div className="marginLoader">
-                    <img src={require('../../img/loader.gif')} alt="cargador"/>
+                    <img src={require('../../img/loader.gif')} alt="loading"/>
                 </div>
             </div>
         )

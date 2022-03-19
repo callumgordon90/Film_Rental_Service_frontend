@@ -9,6 +9,8 @@
     background-color:  rgba(0, 0, 0, 0.527);
     height: 26.1em;
     width: 100vw;
+
+    
 }
 
 
@@ -21,6 +23,27 @@
 
     width: 50vw;
 
-    
+    font-size: large;
 
+    margin-top: 3em;
+    margin-top: 3em;
+    margin-top: 3em;
+    margin-top: 3em;  
+
+}
+
+
+
+.dataFilm {
+font-weight: bolder;
+margin-left: 5em;
+margin-bottom: 2em;
+}
+
+
+
+.cartel {
+
+    height: 50vh;
+    width: 90vw;
 }

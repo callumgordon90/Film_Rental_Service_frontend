@@ -6,12 +6,15 @@
     border-radius: .2em;
     background-color: rgba(0, 0, 0, 0.527);
 
-    color: blue;
+    color: white;
+    font-weight: lighter;
     
 }
 
 
 .designRent:hover{
-    background-color: bisque;
-    transform:scale(.9);
+    background-color:  black;
+    transition: 0.2s;
+    font-weight: bold;
+    cursor: pointer;
 }

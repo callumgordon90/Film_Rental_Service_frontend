@@ -66,7 +66,7 @@ const Home = (props) => {
         return(
             
             <div className = "introText"> <h1>Welcome to the Film Rental Service! </h1>
-            <h2>Take a look at some of the newest offers we have in stock below!</h2>
+            <h2>Take a look at some of the newest offers we have in stock below.. Sign up or log in to place orders!</h2>
 
 
             <div className="designRooster">

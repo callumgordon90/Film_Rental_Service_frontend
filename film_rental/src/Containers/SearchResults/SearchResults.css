@@ -1,5 +1,16 @@
 
 .cartel {
-    height: 15em;
-    width: 9em;
+    height: 50vh;
+    width: 15vw;
+    margin: .5em;
+    box-sizing: border-box;
+}
+
+
+.cartel:hover {
+    cursor: pointer;
+    height: 51vh;
+    width: 16vw;
+    transition: 0.5s;
+    border-radius: 5%;
 }
