@@ -25,31 +25,10 @@
     height: 30em;
     width: 100vw;
 }
-.button1 {
-    width: 6em;
-    height: 2em;
 
-    color: white;
 
-    transition: 0.3s;
-    background-color: red;
-    margin-top: 1em;
 
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    border-radius: 3em;
-    
-}
-.button1:hover{
-
-    transition: 0.3s;
-
-    background-color: crimson;
-
-    cursor: pointer;
-}
-.delete {
+.database {
     width: 10em;
     height: 15em;
     display: flex;

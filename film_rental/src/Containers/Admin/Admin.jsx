@@ -58,7 +58,7 @@ const AdminOrders = (props) => {
                     
                         orders.map((order, index)=> {
                             return(
-                                <div className="delete"key={index}>
+                                <div className="database"key={index}>
                                         <p>Order ID : {order.id} </p>
                                         <p>User ID : {order.usuarioId} </p>
                                         <p>Film ID Number : {order.peliculaId} </p>     

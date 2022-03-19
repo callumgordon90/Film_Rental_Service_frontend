@@ -14,7 +14,7 @@ import Profile from './Containers/Profile/Profile';
 import MovieDetail from './Containers/MovieDetail/MovieDetail';
 import SearchResults from './Containers/SearchResults/SearchResults';
 
-
+import AdminUsers from './Containers/Admin/AdminUsers';
 import Admin from './Containers/Admin/Admin';
 
 
@@ -38,6 +38,8 @@ function App() {
 
          
           <Route path="/admin" element={<Admin/>}/>
+          <Route path="/adminusers" element={<AdminUsers/>}/>
+          
           
 
 

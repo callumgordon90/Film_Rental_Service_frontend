@@ -101,6 +101,7 @@ const Header = (props) => {
                     <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name}</div>
                     
                     <div className="link"onClick={()=>navegar("/admin")}>Admin</div>
+                    <div className="link"onClick={()=>navegar("/adminusers")}>Users</div>
                     
                     <div className="link" onClick={() => logOut()}>Logout</div>
                     {console.log ("estamos como admin")}
