@@ -9,14 +9,15 @@ const Rent = (props) => {
     let navigate = useNavigate();
 
     const alquilar = async () => {
-         //este body corresponde al body de pedido de postman
+         //this pody corresponds to the order from postman
         let body = {
             price: 10,
             peliculaId: props.id,
             usuarioId: props.idUser,
-            fecha: "soon"
+            fecha: 20220221 
         }
 
+        console.log (body);
     
 
         let config = {
@@ -26,6 +27,8 @@ const Rent = (props) => {
         try {
 
         let res = await axios.post("http://localhost:3500/orders",body,config);
+
+        console.log (res, "soy res");
 
         if(res){
         console.log(res);

@@ -84,6 +84,32 @@ const Header = (props) => {
                 </div>
             </div>
         )
+
+    } else if (props.credentials?.token && props.credentials?.usuario.role === true) {
+
+        return (
+            <div className='designHeader'>
+                <div className="headerSpace"></div>
+                <div className="headerSpace searchDesign">
+                    <Input.Group compact>
+                        <Input style={{ width: 'calc(100% - 200px)' }} placeholder="Search for a film by title!" onChange={(ev)=>manejador(ev)}/>
+                        <Button onClick={()=>busquedaPorTitulo()} type="primary">Go!</Button>
+                    </Input.Group>
+                    <div className="relleno"></div>
+                </div>
+                <div className="headerSpace linksDesign">
+                    <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name}</div>
+                    
+                    <div className="link"onClick={()=>navegar("/admin")}>Admin</div>
+                    <div className="link"onClick={()=>navegar("/orders")}>Orders</div>
+                    <div className="link" onClick={() => logOut()}>Logout</div>
+                    {console.log ("estamos como admin")}
+                </div>
+            </div>
+        )
+        
+
+
     } else {
         return (
             <div className='designHeader'>

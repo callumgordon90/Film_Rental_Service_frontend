@@ -44,7 +44,7 @@ const Home = (props) => {
             setTimeout(()=>{
 
                 setFilms(res.data);
-            },1500);
+            },500);
 
         } catch (error) {
             console.log(error);

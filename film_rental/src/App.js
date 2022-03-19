@@ -17,7 +17,6 @@ import SearchResults from './Containers/SearchResults/SearchResults';
 
 import Orders from './Containers/Orders/Orders';
 import AdminOrders from './Containers/AdminOrders/AdminOrders';
-import AdminUsers from './Containers/AdminUsers/AdminUsers';
 
 
 function App() {
@@ -40,8 +39,8 @@ function App() {
 
          
           <Route path="/orders" element={<Orders/>}/>
-          <Route path="/adminorders" element={<AdminOrders/>}/>
-          <Route path="/adminusers" element={<AdminUsers/>}/>
+          <Route path="/admin" element={<AdminOrders/>}/>
+          
 
 
           <Route path="/welcome" element={<AdminOrders/>}/>

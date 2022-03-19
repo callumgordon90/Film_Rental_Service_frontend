@@ -42,20 +42,10 @@ const AdminOrders = (props) => {
             console.log(error);
         }
     };
-    const deleteOrder = async (id) => {
-        
-        try {
-
-        await axios.delete(`http://localhost:3500/orders/${id}`,config);
-
-        getOrders()
-        }catch (error){
-            console.log(error);
-        }
-    };
+    
 
 
-    if(props.credentials?.user.rol === true){
+    if(props.credentials?.usuario.role === true){
        
         return (
             <div className="field">
@@ -66,7 +56,7 @@ const AdminOrders = (props) => {
                                 <div className="delete"key={index}>
                                         <p>USER : {order.name} </p>
                                         <p>MOVIE : {order.title} </p>
-                                        <div onClick={() => deleteOrder(order.id)} className="button1">Delete</div>
+                                        
                                 </div>)     
                         
                         })
