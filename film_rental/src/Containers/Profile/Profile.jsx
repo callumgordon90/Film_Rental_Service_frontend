@@ -8,80 +8,23 @@ import "./Profile.css";
 
 const Profile = (props) => {
 
-    let navigate = useNavigate();
-
-    //Hooks
-    const [datosUsuario, setDatosUsuario] = useState({
-        nombre: props.credentials.usuario.nombre, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
-        dni: props.credentials.usuario.dni,  telefono: props.credentials.usuario.telefono, 
-        numCuenta: props.credentials.usuario.numCuenta
-    });
-
-    //Handler (manejador)
-    const rellenarDatos = (e) => {
-        setDatosUsuario({...datosUsuario, 
-            [e.target.name]: e.target.value})
-    };
-
-    useEffect(() => {
-        if (props.credentials.token === '') {
-            navigate("/");
-        }
-    })
-
-    const updateUser = async () => {
-
-        let body = {
-            nombre: datosUsuario.nombre,
-            apellido: datosUsuario.apellido,
-            email: datosUsuario.email,
-            telefono: parseInt(datosUsuario.telefono),
-            numCuenta: datosUsuario.numCuenta
-        }
-
-        let config = {
-            headers: { Authorization: `Bearer ${props.credentials.token}` }
-        };
-
-        try {
-            //Hacemos el update en la base de datos
-            let res = await axios.put(`https://movie-db-geekshubs.herokuapp.com/usuarios/${props.credentials.usuario.id}`,body, config);
-
-            
-            
-            
-            if(res){
-                //Guardamos en redux
-                props.dispatch({type:MODIFY_CREDENTIALS, payload: datosUsuario});
-            }
-        } catch (error) {
-            console.log(error)
-        }
-
-    }
-
-    return (
-        <div className="designProfile">
-            <div className="designProfileHalf profileLeft">
-                <div className="profileField"><b>Nombre:<input type="text" name="nombre" id="nombre" title="nombre" placeholder={props.credentials.usuario.nombre} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </b></div>
-                <div className="profileField"><b>Apellidos:</b><input type="text" name="apellido" id="apellido" title="apellido" placeholder={props.credentials.usuario.apellido} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </div>
-                <div className="profileField"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.usuario.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
-                <div className="profileField"><b>Teléfono:</b><input type="text" name="telefono" id="telefono" title="telefono" placeholder={props.credentials.usuario.telefono} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </div>
-                <div className="profileField"><b>N. cuenta:</b><input type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder={props.credentials.usuario.numCuenta} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </div>
+    
+    
+   
+        return (
+            <div className = "introText"> <h1>Welcome to your profile page {props.credentials?.usuario.name}!</h1>
+            <h2>Thank you for choosing the Film Rental Service</h2>
+            <div className="designProfile2">We pride ourselves on our excellent 'one-touch' service. Simply find the film that you want on our home page, click on the icon, and it will be dispatched to you immediately by post</div>
+            <div className="designProfile3">Don't see anything you like on the home page? No problem! You can use the search bar at the top to browse our warehouses. If we don't have it in store, simply write us an email and we will order it in immediately!</div>
+       
+        
             </div>
-            <div className="designProfileHalf profileRight">
-                <div className="updateBoton" onClick={()=>updateUser()}>Update</div>  
-             
-            </div>
-        </div>
-    )
-
+        
+        )
+    
 
 }
+
 
 export default connect((state) => ({
     credentials: state.credentials

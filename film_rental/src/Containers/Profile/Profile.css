@@ -1,50 +1,56 @@
 .designProfile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 
-    background-color:  rgba(0, 0, 0, 0.911);;
+    background-color:  rgba(0, 0, 0, 0.432);
+    color: white; 
+
     
-    height: 26.1em;
 
-
+    height: 65vh;
+    width: 100vw;
 }
 
-.designProfileHalf {
 
-    width: 50vw;
-
-}
-
-.profileRight {
+.designProfile2 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: space-around;
-
+    
+    margin-top: 2%;
+    
+    
+    color: white;  
+    font-size: larger;
+    font-weight: bold;
+    height: 10vh;
+    width: 100vw;
 }
 
-.updateBoton {
-    height: 2em;
-    width: 8em;
+.designProfile3 {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: lightsteelblue;
-    color: hsl(0, 0%, 30%);
-
-    border-radius: 0.2em;
-    cursor: pointer;
-
-}
-
-.updateBoton:hover {
-    color: lightsteelblue;
-    background-color: hsl(0, 0%, 30%);
-    border-radius: 0.2em;
     
+    margin-top: 2%;
+    
+    background-color: rgba(0, 0, 0, 0.438);
+    color: black;  
+    font-size: larger;
+    font-weight: bold;
+    height: 15vh;
+    width: 100vw;
 }
+
+
+
+.introText{
+    display: column;
+    background-color: rgba(0, 0, 0, 0.438);
+    justify-content: center;
+    align-items: flex-start;
+}
+
