@@ -2,8 +2,13 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import { GENERATE_ORDER } from '../../redux/types';
+import './Admin.css';
 
-import './AdminOrders.css';
+
+
+
+
+
 
 const AdminOrders = (props) => {
 
@@ -27,7 +32,7 @@ const AdminOrders = (props) => {
      
         try {
 
-            let res = await axios.get(`http://localhost:3500/orders`, config);
+            let res = await axios.get(`http://localhost:3500/orders/retrieve`, config);
             console.log(res.data);
                 setOrders(res.data);
                 setTimeout(()=>{
@@ -54,13 +59,10 @@ const AdminOrders = (props) => {
                         orders.map((order, index)=> {
                             return(
                                 <div className="delete"key={index}>
-                                        <p>USER : {order.name} </p>
-                                        <p>MOVIE : {order.title} </p>
-                                        
+                                        <p>USER : {order.id} </p>
+                                        <p>MOVIE : {order.title} </p>     
                                 </div>)     
-                        
-                        })
-                        
+                        })     
                 }</div>  
                
             </div>
