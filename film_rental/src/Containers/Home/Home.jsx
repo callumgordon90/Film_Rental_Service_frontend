@@ -34,7 +34,7 @@ const Home = (props) => {
         try {
 
             let res = await axios.get("http://localhost:3500/peliculas/retrieve");
-            // Movie database api alternative: "https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-En"
+   
             
 
             //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
@@ -61,11 +61,17 @@ const Home = (props) => {
         //Redirigimos a movieDetail con navigate
         navigate("/moviedetail");
     }
- 
+    
     if(films[0]?.id !== undefined){
         return(
-            <div className="designRooster">
+            
+            <div className = "introText"> <h1>Welcome to the Film Rental Service! </h1>
+            <h2>Take a look at some of the newest offers we have in stock below!</h2>
 
+
+            <div className="designRooster">
+                
+                
                 {
                     //Voy a mapear las películas
                     films.map(pelicula => {
@@ -76,6 +82,7 @@ const Home = (props) => {
                             //Al mapear, cada elemento que se itera del array (en este caso pelicula es ese elemento),
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
+                            
                             <div className="cardPelicula" key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
                                 <img className="fotoCard" src={raiz + pelicula.image} alt={pelicula.title}/>
                                 <p>{pelicula.overview}</p>
@@ -86,6 +93,7 @@ const Home = (props) => {
                 }
                 
             </div>
+            </div> 
         )
     }else{
         return (

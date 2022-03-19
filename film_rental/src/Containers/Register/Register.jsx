@@ -108,10 +108,11 @@ const Register = () => {
         <div className='designRegister'>
              
             <div className="cardRegister">
-                <div className="upCardRegister">Sign up to the Film Rental Service here:</div>
+                <div className="upCardRegister">Sign up to the Film Rental Service here..
+                 Fill in these fields to create a new accout. Once you have created a new account, you will be able to log in and place orders!
+                </div>
                 <div className="middleCardRegister">
-                    {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
-
+                  
                    
                     <input type="text" name="name" id="name" title="name" placeholder="Name:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="text" name="age" id="age" title="age" placeholder="Age:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>

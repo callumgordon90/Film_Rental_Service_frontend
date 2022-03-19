@@ -37,6 +37,8 @@ const Login = (props) => {
             password: datosUsuario.password
        }
 
+    
+
         try {
 
 
@@ -79,13 +81,22 @@ const Login = (props) => {
         return(
             
             <div className='designLogin'>
-                 {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
+                <div className = "introText"> <h1>...Already have an account? </h1>
+                <h2>You can log in to make fast one-touch orders here!</h2></div>
+                
+                
                 <div className="designFormulario">
+
+                
+
                     <input type="email" name="email" id="email" title="email" placeholder="Email" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password" id="password" title="password" placeholder="Password" autoComplete="off" onChange={(e)=>{rellenarDatos(e);}}/>
                     {msgError}
                     {msgError2}
                 </div>
+
+
+
                 <div className="loginButton espacio" onClick={()=>userLogin()}>LOGIN!</div>
             </div>
         );
