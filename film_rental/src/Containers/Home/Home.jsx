@@ -33,13 +33,15 @@ const Home = (props) => {
 
         try {
 
-            let res = await axios.get("http://localhost:3500/peliculas/retrieve");
+            let res = await axios.get("https://api-film-deployed.herokuapp.com/peliculas/retrieve/");
+
+            //alternative endpoint: "http://localhost:3500/peliculas/retrieve"
    
             
 
-            //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
-            //será setear esos datos en el hook, haciendo que las peliculas estén disponibles 
-            //para los return del componente.
+            //Once the data has come from the backend, the next thing we will do to make sure it is not lost
+            //set that data in the hook, making the movies available for the component's returns. 
+            //for the component's returns.
 
             setTimeout(()=>{
 
