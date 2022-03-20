@@ -8,6 +8,10 @@ const Rent = (props) => {
 
     let navigate = useNavigate();
 
+    const myFunction = async () => { 
+        alert("Thank you for your purchase! It will be dispatched to your address automatically. We will now return you to the home page so you can continue browsing our excellent films");
+    }
+
     const alquilar = async () => {
          //this pody corresponds to the order from postman
         let body = {
@@ -18,6 +22,7 @@ const Rent = (props) => {
         }
 
         console.log (body);
+
     
 
         let config = {
@@ -41,7 +46,12 @@ const Rent = (props) => {
     }
 
     return (
-        <div className="designRent" onClick={()=>alquilar()}>Order it now!</div>
+        <div className="designRent" onClick={()=>{ alquilar(); myFunction() }}>Order it now!</div>
+
+
+
+
+
     )
 }
 
