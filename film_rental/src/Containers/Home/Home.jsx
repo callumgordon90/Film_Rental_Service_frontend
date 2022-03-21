@@ -33,9 +33,9 @@ const Home = (props) => {
 
         try {
 
-            let res = await axios.get("https://api-film-deployed.herokuapp.com/peliculas/retrieve/");
+            let res = await axios.get("http://localhost:3500/peliculas/retrieve");
 
-            //alternative endpoint: "http://localhost:3500/peliculas/retrieve"
+            //alternative endpoint: "https://api-film-deployed.herokuapp.com/peliculas/retrieve/" 
    
             
 
