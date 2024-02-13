@@ -1,12 +1,12 @@
 ## Film-Rental-Service:
 
-## Film Rental Front-End Project for GeeksHubs Academy.  https://github.com/callumgordon90/Proyecto-5-GeeksHubsAcademy/tree/main/film_rental
+## Film Rental Front-End Project
 
-A front end project made with react in node.js. The purpose of this project was to create a fully interactive website for a movie rental company, which has a login, sign up, and admin section, as well as the ability to search for films in a back end database and then rent them,
+A frontend project made with react in node.js. The purpose of this project was to create a fully interactive website for a movie rental company, which has a login, sign up, and admin section, as well as the ability to search for films in a back end database and then rent them,
 
 ***
 
-## Made with React and Redux. Designed to connect with Api and Database from Project 4 (https://github.com/callumgordon90/Proyecto-4-GeeksHubsAcademy)
+## Made with React and Redux. 
 
 
 ***
