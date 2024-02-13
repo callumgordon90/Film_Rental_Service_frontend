@@ -1,5 +1,3 @@
-## Film-Rental-Service:
-
 ## Film Rental Front-End Project
 
 A frontend project made with react in node.js. The purpose of this project was to create a fully interactive website for a movie rental company, which has a login, sign up, and admin section, as well as the ability to search for films in a back end database and then rent them,
